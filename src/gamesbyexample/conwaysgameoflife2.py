@@ -52,7 +52,10 @@ def main():
     while True:  # Main program loop.
         previousCells = currentCells
         currentCells = nextCells
-
+        
+        # Force start at the top (against scroll bug)
+        bext.goto(0,0)
+        
         # Print the cells:
         for y in range(0, HEIGHT, 2):  # Skip every other row.
             for x in range(WIDTH):
@@ -78,7 +81,7 @@ def main():
                         # Fill in nothing:
                         print(' ', end='')
 
-        print()  # Print a newline at the end of the screen.
+            print()  # Print a newline at the end of the row.
         print('Press Ctrl-C to quit.', end='', flush=True)
 
         # Calculate next cells based on current cells:
