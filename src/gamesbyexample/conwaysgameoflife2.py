@@ -7,7 +7,7 @@ This program MUST be run in a Terminal/Command Prompt window.
 Do not resize the terminal window while this program is running.
 This and other games are available at https://nostarch.com/XX
 Tags: large, artistic, simulation, bext, terminal"""
-__version__ = 0  # TODO - There's a weird bug on the Windows that adds unwanted scrolling.
+__version__ = 1  # 1 = removed unwanted scrolling (spp2).
 import random, sys, time
 
 try:
@@ -78,7 +78,7 @@ def main():
                         # Fill in nothing:
                         print(' ', end='')
 
-            print()  # Print a newline at the end of the row.
+        print()  # Print a newline at the end of the screen.
         print('Press Ctrl-C to quit.', end='', flush=True)
 
         # Calculate next cells based on current cells:
